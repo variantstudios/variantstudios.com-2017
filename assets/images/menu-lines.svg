@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="21px" viewBox="0 0 34 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Tablet-Portrait" transform="translate(-691.000000, -44.000000)" stroke-width="3">
+            <g id="Group" transform="translate(693.000000, 44.000000)">
+                <path d="M0,1.5 L30,1.5" id="Line" stroke="#552959"></path>
+                <path d="M0,10.5 L30,10.5" id="Line-Copy-3" stroke="#BE5B3E"></path>
+                <path d="M0,19.5 L30,19.5" id="Line-Copy-4" stroke="#F08431"></path>
+            </g>
+        </g>
+    </g>
+</svg>

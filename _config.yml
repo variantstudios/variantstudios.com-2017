@@ -1,7 +1,7 @@
 # Site settings
-title: "Jekyll Base"
+title: "Variant Studios"
 email: "team@variantstudios.com"
-description: "Our base repo for jekyll-based sites that use CloudCannon"
+description: "Web design and development"
 baseurl: "" # the subpath of your site, e.g. /blog/ - keep empty!
 url: "" # the base hostname & protocol for your site - don't include the forward slash
 #timezone: America/Denver - Don't set for CloudCannon...for reasons.
@@ -62,12 +62,12 @@ defaults:
       tags:
 
 # Cloudinary URL - something like: https://res.cloudinary.com/domain-com/
-cloudinaryurl: ""
+cloudinaryurl: "https://res.cloudinary.com/variant-studios"
 
 # typekit - Because we all need nice type faces.
-typekit: ""
+typekit: "bnl4cru"
 
 # Google Analytics - What site isn't using it?!
-google_analytics_tracking_id: ""
+google_analytics_tracking_id: 
 
 exclude: ["vendor","node_modules","package.json","Gemfile","gulpfile.js","*.scss"]
