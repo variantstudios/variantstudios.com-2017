@@ -4,7 +4,7 @@
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
 {% include head.html %}
-<body>
+<body {% if page.class %}class="{{page.class}}"{% endif %}>
 	{% include browserupgrade.html %}
 
   <div class="header-wrapper clearfix">
@@ -16,8 +16,22 @@
   </div>
   
   <div class="footer-wrapper clearfix">
-  	{% include footer.html %}
+    {% if page.url == "/" %}
+      {% include front-footer.html %}
+    {% else %}
+  	  {% include footer.html %}
+    {% endif %}
   </div>
+
+  <!--<svg style="display: none;">
+  <defs>
+    <filter id="filter">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="filter"/>
+      <feComposite in="SourceGraphic" in2="filter" operator="atop"/>
+    </filter>
+  </defs>
+</svg>-->
 
 	{% include scripts.html %}
 </body>

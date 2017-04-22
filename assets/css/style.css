@@ -338,12 +338,14 @@ ul.pager li a:visited {
   top: -5px;
   right: 0px;
   background: url("../images/menu-corner.svg") center center no-repeat;
+  -webkit-filter: url(#filter);
+          filter: url(#filter);
 }
-/* line 11, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 12, ../sass/partials/design/blocks/_main-navigation.scss */
 .menu-corner .menu-trigger {
-  position: absolute;
-  top: 50px;
-  right: 40px;
+  position: relative;
+  top: 30px;
+  right: -180px;
   width: 30px;
   height: 20px;
   -webkit-transform: rotate(0deg);
@@ -352,10 +354,8 @@ ul.pager li a:visited {
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
 }
-/* line 30, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 31, ../sass/partials/design/blocks/_main-navigation.scss */
 .menu-corner .menu-trigger span {
   display: block;
   position: absolute;
@@ -371,45 +371,45 @@ ul.pager li a:visited {
           transition: .25s ease-in-out;
 }
 
-/* line 44, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 45, ../sass/partials/design/blocks/_main-navigation.scss */
 .menu-trigger span:nth-child(1) {
   top: 0px;
   background: #552959;
 }
 
-/* line 49, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 50, ../sass/partials/design/blocks/_main-navigation.scss */
 .menu-trigger span:nth-child(2) {
   top: 10px;
   background: #BE5B3E;
 }
 
-/* line 53, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 54, ../sass/partials/design/blocks/_main-navigation.scss */
 menu-trigger span:nth-child(3) {
   top: 10px;
   background: #552959;
 }
 
-/* line 58, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 59, ../sass/partials/design/blocks/_main-navigation.scss */
 .menu-trigger span:nth-child(4) {
   top: 20px;
   background: #F08431;
 }
 
-/* line 63, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 64, ../sass/partials/design/blocks/_main-navigation.scss */
 .menu-trigger.open span:nth-child(1) {
   top: 10px;
   width: 0%;
   left: 50%;
 }
 
-/* line 69, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 70, ../sass/partials/design/blocks/_main-navigation.scss */
 .menu-trigger.open span:nth-child(2) {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
       transform: rotate(45deg);
 }
 
-/* line 77, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 78, ../sass/partials/design/blocks/_main-navigation.scss */
 .menu-trigger.open span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -417,11 +417,120 @@ menu-trigger span:nth-child(3) {
   background: #552959;
 }
 
-/* line 85, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 86, ../sass/partials/design/blocks/_main-navigation.scss */
 .menu-trigger.open span:nth-child(4) {
   top: 18px;
   width: 0%;
   left: 50%;
+}
+
+/* line 5, ../sass/partials/design/regions/_footer.scss */
+.front .footer-wrapper {
+  background: #111;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+/* line 11, ../sass/partials/design/regions/_footer.scss */
+.front .footer-wrapper h3 {
+  margin: 0;
+  color: #fff;
+}
+/* line 15, ../sass/partials/design/regions/_footer.scss */
+.front .footer-wrapper div {
+  height: 50px;
+  text-align: center;
+  padding-top: 10px;
+  cursor: pointer;
+}
+/* line 21, ../sass/partials/design/regions/_footer.scss */
+.front .footer-wrapper .one {
+  background: #F88D2F;
+}
+@media (min-width: 50em) {
+  /* line 21, ../sass/partials/design/regions/_footer.scss */
+  .front .footer-wrapper .one {
+    width: 25%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+}
+/* line 92, ../../vendor/bundle/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .front .footer-wrapper .one {
+  width: 25%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
+}
+/* line 27, ../sass/partials/design/regions/_footer.scss */
+.front .footer-wrapper .two {
+  background: #C35C3B;
+}
+@media (min-width: 50em) {
+  /* line 27, ../sass/partials/design/regions/_footer.scss */
+  .front .footer-wrapper .two {
+    width: 25%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 25%;
+    clear: none;
+  }
+}
+/* line 92, ../../vendor/bundle/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .front .footer-wrapper .two {
+  width: 25%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 25%;
+  clear: none;
+}
+/* line 33, ../sass/partials/design/regions/_footer.scss */
+.front .footer-wrapper .three {
+  background: #783A50;
+}
+@media (min-width: 50em) {
+  /* line 33, ../sass/partials/design/regions/_footer.scss */
+  .front .footer-wrapper .three {
+    width: 25%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 50%;
+    clear: none;
+  }
+}
+/* line 92, ../../vendor/bundle/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .front .footer-wrapper .three {
+  width: 25%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 50%;
+  clear: none;
+}
+/* line 39, ../sass/partials/design/regions/_footer.scss */
+.front .footer-wrapper .four {
+  background: #46225E;
+}
+@media (min-width: 50em) {
+  /* line 39, ../sass/partials/design/regions/_footer.scss */
+  .front .footer-wrapper .four {
+    width: 25%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+/* line 92, ../../vendor/bundle/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .front .footer-wrapper .four {
+  width: 25%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
 }
 
 /* line 1, ../sass/partials/design/regions/_header.scss */

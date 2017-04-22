@@ -10,7 +10,14 @@ $(document).ready(function() {
   //   $('.menu').toggleClass('show');
   // });
 
-TweenLite.from(".menu-corner ", 0.5, {ease: Back.easeOut.config(.4), top:-300, right: -100});
+//TweenLite.from(".header-wrapper", 1, {ease: Elastic.easeOut.config(1, 0.3), top:-100});
+TweenLite.from(".header-wrapper", 0.5, { ease: Back.easeOut.config(0.3), top:-100 });
+
+TweenLite.from(".menu-corner ", 0.5, {delay: 1, ease: Back.easeOut.config(.4), top:-300, right: -100});
+
+TweenLite.from(".footer-wrapper", 0.5, {delay: 1.2, ease: Back.easeOut.config(.4), bottom:-50});
+
+
 
 //  $('.menu-trigger').on('click',
 //   function() {
