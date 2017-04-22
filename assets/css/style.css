@@ -578,8 +578,8 @@ menu-trigger span:nth-child(3) {
 /* line 14, ../sass/partials/design/regions/_header.scss */
 .header-wrapper {
   padding: 1em 0;
-  background-image: -webkit-linear-gradient(225deg, #3b1d61 0%, #562a59 14%, #cb6039 73%, #ff942d 100%);
-  background-image: linear-gradient(-135deg, #3b1d61 0%, #562a59 14%, #cb6039 73%, #ff942d 100%);
+  background-image: -webkit-linear-gradient(315deg, #3b1d61 0%, #562a59 14%, #cb6039 73%, #ff942d 100%);
+  background-image: linear-gradient(135deg, #3b1d61 0%, #562a59 14%, #cb6039 73%, #ff942d 100%);
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.34);
           box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.34);
   -webkit-transition: all .5s ease-in-out;
