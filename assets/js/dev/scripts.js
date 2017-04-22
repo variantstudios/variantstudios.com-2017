@@ -10,6 +10,16 @@ $(document).ready(function() {
   //   $('.menu').toggleClass('show');
   // });
 
+
+// Front Slider
+$('.front-slider').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  adaptiveHeight: true
+});
+
+
 //TweenLite.from(".header-wrapper", 1, {ease: Elastic.easeOut.config(1, 0.3), top:-100});
 TweenLite.from(".header-wrapper", 0.5, { ease: Back.easeOut.config(0.3), top:-100 });
 
@@ -17,7 +27,20 @@ TweenLite.from(".menu-corner ", 0.5, {delay: 1, ease: Back.easeOut.config(.4), t
 
 TweenLite.from(".footer-wrapper", 0.5, {delay: 1.2, ease: Back.easeOut.config(.4), bottom:-50});
 
+  $('.footer-wrapper div').on('mouseenter',
+  function() {
+    TweenLite.to(this, 0.5, {ease:Back.easeOut, bottom:5});
+  });
+  $('.footer-wrapper div').on('mouseleave',
+  function() {
+    TweenLite.to(this, 0.2, {ease:Back.easeOut, bottom:0});
+  });
+  $('.footer-wrapper div').on('click',
+  function() {
+    TweenLite.to('.main-wrapper', 0.5, {ease:Back.easeOut, backgroundColor:"rgba(36,36,36,0.78)"});
+  });
 
+  
 
 //  $('.menu-trigger').on('click',
 //   function() {
