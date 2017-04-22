@@ -1,3 +1,33 @@
+.front-slick.slick-slider {
+    .slick-prev {
+        left: 16px;
+    }
+    .slick-next {
+        right: 16px;
+    }
+}
 .slick-track div {
     height: 100vh;
+}
+.slick-slide{
+    a {
+       
+    }
+    h3 {
+        position: absolute;
+        bottom: 180px;
+        margin-left: 40px;
+        color: #FFF;
+        z-index: 1;
+        display: block;
+    }
+    &:before {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 68%, rgba(0, 0, 0, 0.65) 100%);
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 }

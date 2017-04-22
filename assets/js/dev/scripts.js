@@ -19,6 +19,17 @@ $('.front-slider').slick({
   adaptiveHeight: true
 });
 
+// function setHeight() {
+//     windowHeight = $(window).innerHeight();
+//     $('.main-wrapper').css('min-height', windowHeight);
+//   };
+//   setHeight();
+  
+//   $(window).resize(function() {
+//     setHeight();
+//   });
+// });
+
 
 //TweenLite.from(".header-wrapper", 1, {ease: Elastic.easeOut.config(1, 0.3), top:-100});
 TweenLite.from(".header-wrapper", 0.5, { ease: Back.easeOut.config(0.3), top:-100 });

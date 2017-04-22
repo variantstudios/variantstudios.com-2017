@@ -16,6 +16,7 @@
   background-image: linear-gradient(135deg, #3B1D61 0%, #562A59 14%, #CB6039 73%, #FF942D 100%);
   box-shadow: 0 1px 3px 0 rgba(0,0,0,0.34);
   transition: all .5s ease-in-out;
+  z-index: 1;
   &.open {
     height: 100%;
     transition: all .5s ease-in-out;
