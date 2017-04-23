@@ -1,8 +1,14 @@
-- text: About
-  url: /about/
+- text: Home
+  url: /
+- text: Portfolio
+  url: /portfolio/
 - text: Services
   url: /services/
 - text: Blog
   url: /blog/
+- text: Studio
+  url: /studio/
 - text: Contact
   url: /contact/
+- text: Start a Project
+  url: /start-a-project/

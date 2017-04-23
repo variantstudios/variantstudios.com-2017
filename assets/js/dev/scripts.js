@@ -34,9 +34,11 @@ $('.front-slider').slick({
 //TweenLite.from(".header-wrapper", 1, {ease: Elastic.easeOut.config(1, 0.3), top:-100});
 
 
+TweenLite.to(".menu-trigger", 0, { display:"block" });
+TweenLite.to(".main-wrapper", 1, {delay: 1.2, ease: Expo.easeInOut, opacity:1 });
+TweenLite.from(".header-wrapper", 0.5, { ease: Back.easeOut.config(0.3), top:-200 });
 
-TweenLite.to(".main-wrapper", 1, {delay: 2, ease: Back.easeOut.config(0.3), opacity:1 });
-TweenLite.from(".header-wrapper", 0.5, { ease: Back.easeOut.config(0.3), top:-100 });
+
 
 TweenLite.from(".menu-corner ", 0.5, {delay: 1, ease: Back.easeOut.config(.4), top:-300, right: -100});
 
@@ -85,17 +87,34 @@ TweenLite.from(".footer-wrapper", 0.5, {delay: 1.2, ease: Back.easeOut.config(.4
 
   var open = false;
 
-TweenLite.to("#first", 0, {
+// TweenLite.from("#first", 0, {
+//   drawSVG: "0% 0%",
+//   ease: Power1.easeInOut,
+//   stroke: "#552959"
+// })
+
+TweenLite.fromTo("#first", 0, {drawSVG:"0%"}, {drawSVG:"0%", immediateRender:false})
+TweenLite.fromTo("#middle", 0, {drawSVG:"0%"}, {drawSVG:"0%", immediateRender:false})
+TweenLite.fromTo("#second", 0, {drawSVG:"1%"}, {drawSVG:"0%", immediateRender:false})
+//TweenLite.fromTo(".menu-text", 0, {opacity:0, immediateRender:false})
+TweenLite.to(".menu-text", .5, {
+  opacity:1,
+  ease: Power1.easeInOut
+})
+TweenLite.to("#first", .5, {
+  delay: 1.2,
   drawSVG: "14%",
   ease: Power1.easeInOut,
-  stroke: "#552959"
+  stroke: "#552959",
 })
-TweenLite.to("#middle", 0, {
+TweenLite.to("#middle", .6, {
+  delay: 1.2,
   drawSVG: "100%",
   ease: Power1.easeInOut,
   stroke: "#BE5B3E"
 })
-TweenLite.to("#second", 0, {
+TweenLite.to("#second", .7, {
+  delay: 1.2,
   drawSVG: "11.5%",
   ease: Power1.easeInOut,
   stroke: "#F08431"
@@ -105,9 +124,9 @@ TweenLite.to("#second", 0, {
 $('.trigger').click(function() {
   console.log("trigger");
   if (!open) {
-    TweenLite.to(".overlay", 0.8, {ease: Expo.easeInOut, opacity:"1"});
-    TweenLite.to("ul.menu", 0.9, {ease: Expo.easeInOut, opacity:"1", left: "200px"});
-    
+    TweenLite.to(".overlay", 0.8, {ease: Expo.easeInOut, opacity:"1", zIndex:1});
+    TweenLite.to("ul.menu", 0.9, {ease: Expo.easeInOut, opacity:"1", left: "200px", zIndex:1});
+    $('.menu-text').text("close");
     TweenLite.to("#first", .5, {
       drawSVG: "78% 93%",
       ease: Power1.easeInOut
@@ -122,8 +141,9 @@ $('.trigger').click(function() {
     });
     
   } else {
-    TweenLite.to(".overlay", 0.4, { ease: Expo.easeInOut, opacity:"0" });
-    TweenLite.to("ul.menu", 0.5, {ease: Expo.easeInOut, opacity:"0", left: "100px"});
+    $('.menu-text').text("menu");
+    TweenLite.to(".overlay", 0.5, { ease: Expo.easeInOut, opacity:"0", zIndex:0});
+    TweenLite.to("ul.menu", 0.5, {ease: Expo.easeInOut, opacity:"0", left: "100px", zIndex:0});
     TweenLite.to("#first", .4, {
       drawSVG: "0% 14%",
       ease: Power1.easeInOut

@@ -4,11 +4,20 @@
   margin: 0 auto;
   padding: 0;
 }
-.main-wrapper {
-  height: 100%;
-  opacity: 0;
-}
 
+
+body.notfront {
+  .main-wrapper {
+    margin-top: 80px;
+    opacity: 0;
+  }
+}
+body.front {
+  .main-wrapper {
+    margin-top: 0px;
+    opacity: 0;
+  }
+}
 main {
   @include clearfix;
   padding: 0;
