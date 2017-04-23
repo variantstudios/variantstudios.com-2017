@@ -123,10 +123,10 @@ TweenLite.to("#second", .7, {
 
 //tl.timeScale(2);
 $('.trigger').click(function() {
-  console.log("trigger");
+  //console.log("trigger");
   if (!open) {
     TweenLite.to(".overlay", 0.8, {ease: Expo.easeInOut, opacity:"1", zIndex:1, display: "block"});
-    TweenLite.to("ul.menu", 0.9, {ease: Expo.easeInOut, opacity:"1", left: "200px", zIndex:1});
+    TweenLite.to("ul.menu", 0.9, {ease: Expo.easeInOut, opacity:"1", left: "110px", zIndex:1});
     $('.menu-text').text("close");
     TweenLite.to("#first", .5, {
       drawSVG: "78% 93%",
@@ -144,7 +144,7 @@ $('.trigger').click(function() {
   } else {
     $('.menu-text').text("menu");
     TweenLite.to(".overlay", 0.5, { ease: Expo.easeInOut, opacity:"0", zIndex:0, display: "none"});
-    TweenLite.to("ul.menu", 0.5, {ease: Expo.easeInOut, opacity:"0", left: "100px", zIndex:0});
+    TweenLite.to("ul.menu", 0.5, {ease: Expo.easeInOut, opacity:"0", left: "10px", zIndex:0});
     TweenLite.to("#first", .4, {
       drawSVG: "0% 14%",
       ease: Power1.easeInOut
