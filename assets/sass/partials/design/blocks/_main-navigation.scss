@@ -1,10 +1,10 @@
 .overlay {
- position: absolute;
+ position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 0;
   opacity: 0;
   background-image: linear-gradient(135deg, #3B1D61 0%, #562A59 14%, #CB6039 73%, #FF942D 100%);
 }
@@ -49,16 +49,29 @@ ul.menu {
     padding: 0;
     margin: 0;
     top: 160px;
-    left: 100px;
+    left: -100px;
     opacity: 0;
+    z-index: 0;
     li {
       display: block;
       a {
         color: #fff;
-        font-size: 2.5em;
+        font-size: 2.2em;
         text-decoration: none;
+        transition: all .1s ease-in;
+        font-family: "sofia-pro", sans-serif;
+        &:hover {
+          margin-left: 10px;
+          transition: all .3s ease-out;      
+        }
       }
     }
+}
+.menu-text {
+    margin: -40px 0 0 35px;
+    color: rgba(126, 126, 126, 0.45);
+    font-size: .7em;
+    opacity: 0;
 }
 
 // .menu {
