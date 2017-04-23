@@ -599,9 +599,10 @@ ul.menu li a {
 /* line 7, ../sass/partials/design/regions/_main.scss */
 .main-wrapper {
   height: 100%;
+  opacity: 0;
 }
 
-/* line 11, ../sass/partials/design/regions/_main.scss */
+/* line 12, ../sass/partials/design/regions/_main.scss */
 main {
   padding: 0;
 }
