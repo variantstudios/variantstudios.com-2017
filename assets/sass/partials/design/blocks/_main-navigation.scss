@@ -1,5 +1,6 @@
 .overlay {
  position: fixed;
+ display: none;
   top: 0;
   left: 0;
   width: 100%;
@@ -33,6 +34,9 @@ svg path, svg line {
     stroke-width: 6px;
     stroke-linecap: round;
     fill: none;
+}
+#hamburger {
+  display: none;
 }
 .trigger {
   position: absolute;
