@@ -331,6 +331,7 @@ ul.pager li a:visited {
 /* line 1, ../sass/partials/design/blocks/_main-navigation.scss */
 .overlay {
   position: fixed;
+  display: none;
   top: 0;
   left: 0;
   width: 100%;
@@ -341,12 +342,12 @@ ul.pager li a:visited {
   background-image: linear-gradient(135deg, #3b1d61 0%, #562a59 14%, #cb6039 73%, #ff942d 100%);
 }
 
-/* line 12, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 13, ../sass/partials/design/blocks/_main-navigation.scss */
 .header-wrapper {
   position: relative;
 }
 
-/* line 15, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 16, ../sass/partials/design/blocks/_main-navigation.scss */
 .menu-corner {
   height: 130px;
   width: 250px;
@@ -356,7 +357,7 @@ ul.pager li a:visited {
   background: url("../images/menu-corner.svg") center center no-repeat;
   z-index: 1;
 }
-/* line 23, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 24, ../sass/partials/design/blocks/_main-navigation.scss */
 .menu-corner .menu-trigger {
   position: relative;
   top: 0px;
@@ -364,7 +365,7 @@ ul.pager li a:visited {
   cursor: pointer;
 }
 
-/* line 31, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 32, ../sass/partials/design/blocks/_main-navigation.scss */
 svg path, svg line {
   stroke: #fff;
   stroke-width: 6px;
@@ -372,7 +373,12 @@ svg path, svg line {
   fill: none;
 }
 
-/* line 37, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 38, ../sass/partials/design/blocks/_main-navigation.scss */
+#hamburger {
+  display: none;
+}
+
+/* line 41, ../sass/partials/design/blocks/_main-navigation.scss */
 .trigger {
   position: absolute;
   width: 100%;
@@ -383,7 +389,7 @@ svg path, svg line {
   left: 0;
 }
 
-/* line 47, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 51, ../sass/partials/design/blocks/_main-navigation.scss */
 ul.menu {
   position: absolute;
   padding: 0;
@@ -393,11 +399,11 @@ ul.menu {
   opacity: 0;
   z-index: 0;
 }
-/* line 55, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 59, ../sass/partials/design/blocks/_main-navigation.scss */
 ul.menu li {
   display: block;
 }
-/* line 57, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 61, ../sass/partials/design/blocks/_main-navigation.scss */
 ul.menu li a {
   color: #fff;
   font-size: 2.2em;
@@ -406,14 +412,14 @@ ul.menu li a {
           transition: all .1s ease-in;
   font-family: "sofia-pro", sans-serif;
 }
-/* line 63, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 67, ../sass/partials/design/blocks/_main-navigation.scss */
 ul.menu li a:hover {
   margin-left: 10px;
   -webkit-transition: all .3s ease-out;
           transition: all .3s ease-out;
 }
 
-/* line 70, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 74, ../sass/partials/design/blocks/_main-navigation.scss */
 .menu-text {
   margin: -40px 0 0 35px;
   color: rgba(126, 126, 126, 0.45);

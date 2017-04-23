@@ -34,7 +34,8 @@ $('.front-slider').slick({
 //TweenLite.from(".header-wrapper", 1, {ease: Elastic.easeOut.config(1, 0.3), top:-100});
 
 
-TweenLite.to(".menu-trigger", 0, { display:"block" });
+
+TweenLite.to("#hamburger", 0, { display:"block" });
 TweenLite.to(".main-wrapper", 1, {delay: 1.2, ease: Expo.easeInOut, opacity:1 });
 TweenLite.from(".header-wrapper", 0.5, { ease: Back.easeOut.config(0.3), top:-200 });
 
@@ -124,7 +125,7 @@ TweenLite.to("#second", .7, {
 $('.trigger').click(function() {
   console.log("trigger");
   if (!open) {
-    TweenLite.to(".overlay", 0.8, {ease: Expo.easeInOut, opacity:"1", zIndex:1});
+    TweenLite.to(".overlay", 0.8, {ease: Expo.easeInOut, opacity:"1", zIndex:1, display: "block"});
     TweenLite.to("ul.menu", 0.9, {ease: Expo.easeInOut, opacity:"1", left: "200px", zIndex:1});
     $('.menu-text').text("close");
     TweenLite.to("#first", .5, {
@@ -142,7 +143,7 @@ $('.trigger').click(function() {
     
   } else {
     $('.menu-text').text("menu");
-    TweenLite.to(".overlay", 0.5, { ease: Expo.easeInOut, opacity:"0", zIndex:0});
+    TweenLite.to(".overlay", 0.5, { ease: Expo.easeInOut, opacity:"0", zIndex:0, display: "none"});
     TweenLite.to("ul.menu", 0.5, {ease: Expo.easeInOut, opacity:"0", left: "100px", zIndex:0});
     TweenLite.to("#first", .4, {
       drawSVG: "0% 14%",
