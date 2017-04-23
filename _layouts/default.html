@@ -6,14 +6,15 @@
 {% include head.html %}
 <body {% if page.class %}class="{{page.class}}"{% endif %}>
 	{% include browserupgrade.html %}
-
+ <div class="overlay"></div>
   <div class="header-wrapper clearfix">
 	  {% include header.html %}
   </div>
-
+ 
   <div class="main-wrapper clearfix">
 	  {{ content }}
   </div>
+  
   
   <div class="footer-wrapper clearfix">
     {% if page.url == "/" %}

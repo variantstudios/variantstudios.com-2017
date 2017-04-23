@@ -329,11 +329,24 @@ ul.pager li a:visited {
 }
 
 /* line 1, ../sass/partials/design/blocks/_main-navigation.scss */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  background-image: -webkit-linear-gradient(315deg, #3b1d61 0%, #562a59 14%, #cb6039 73%, #ff942d 100%);
+  background-image: linear-gradient(135deg, #3b1d61 0%, #562a59 14%, #cb6039 73%, #ff942d 100%);
+}
+
+/* line 12, ../sass/partials/design/blocks/_main-navigation.scss */
 .header-wrapper {
   position: relative;
 }
 
-/* line 4, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 15, ../sass/partials/design/blocks/_main-navigation.scss */
 .menu-corner {
   height: 130px;
   width: 250px;
@@ -343,88 +356,51 @@ ul.pager li a:visited {
   background: url("../images/menu-corner.svg") center center no-repeat;
   z-index: 1;
 }
-/* line 12, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 23, ../sass/partials/design/blocks/_main-navigation.scss */
 .menu-corner .menu-trigger {
   position: relative;
-  top: 30px;
-  right: -180px;
-  width: 30px;
-  height: 20px;
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-      transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  top: 0px;
+  right: -145px;
   cursor: pointer;
 }
+
 /* line 31, ../sass/partials/design/blocks/_main-navigation.scss */
-.menu-corner .menu-trigger span {
-  display: block;
+svg path, svg line {
+  stroke: #fff;
+  stroke-width: 6px;
+  stroke-linecap: round;
+  fill: none;
+}
+
+/* line 37, ../sass/partials/design/blocks/_main-navigation.scss */
+.trigger {
   position: absolute;
-  height: 4px;
   width: 100%;
-  border-radius: 9px;
-  opacity: 1;
+  height: 100%;
+  cursor: pointer;
+  z-index: 5;
+  top: 0;
   left: 0;
-  -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-          transition: .25s ease-in-out;
 }
 
-/* line 45, ../sass/partials/design/blocks/_main-navigation.scss */
-.menu-trigger span:nth-child(1) {
-  top: 0px;
-  background: #552959;
+/* line 47, ../sass/partials/design/blocks/_main-navigation.scss */
+ul.menu {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 160px;
+  left: 100px;
+  opacity: 0;
 }
-
-/* line 50, ../sass/partials/design/blocks/_main-navigation.scss */
-.menu-trigger span:nth-child(2) {
-  top: 10px;
-  background: #BE5B3E;
-}
-
 /* line 54, ../sass/partials/design/blocks/_main-navigation.scss */
-menu-trigger span:nth-child(3) {
-  top: 10px;
-  background: #552959;
+ul.menu li {
+  display: block;
 }
-
-/* line 59, ../sass/partials/design/blocks/_main-navigation.scss */
-.menu-trigger span:nth-child(4) {
-  top: 20px;
-  background: #F08431;
-}
-
-/* line 64, ../sass/partials/design/blocks/_main-navigation.scss */
-.menu-trigger.open span:nth-child(1) {
-  top: 10px;
-  width: 0%;
-  left: 50%;
-}
-
-/* line 70, ../sass/partials/design/blocks/_main-navigation.scss */
-.menu-trigger.open span:nth-child(2) {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
-}
-
-/* line 78, ../sass/partials/design/blocks/_main-navigation.scss */
-.menu-trigger.open span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-  background: #552959;
-  top: 10px;
-}
-
-/* line 87, ../sass/partials/design/blocks/_main-navigation.scss */
-.menu-trigger.open span:nth-child(4) {
-  top: 18px;
-  width: 0%;
-  left: 50%;
+/* line 56, ../sass/partials/design/blocks/_main-navigation.scss */
+ul.menu li a {
+  color: #fff;
+  font-size: 2.5em;
+  text-decoration: none;
 }
 
 /* line 2, ../sass/partials/design/blocks/_slick.scss */
@@ -470,13 +446,14 @@ menu-trigger span:nth-child(3) {
   bottom: 0;
   width: 100%;
   height: 50px;
+  z-index: 1;
 }
-/* line 11, ../sass/partials/design/regions/_footer.scss */
+/* line 12, ../sass/partials/design/regions/_footer.scss */
 .front .footer-wrapper h3 {
   margin: 0;
   color: #fff;
 }
-/* line 15, ../sass/partials/design/regions/_footer.scss */
+/* line 16, ../sass/partials/design/regions/_footer.scss */
 .front .footer-wrapper div {
   height: 50px;
   text-align: center;
@@ -484,12 +461,12 @@ menu-trigger span:nth-child(3) {
   cursor: pointer;
   position: relative;
 }
-/* line 22, ../sass/partials/design/regions/_footer.scss */
+/* line 23, ../sass/partials/design/regions/_footer.scss */
 .front .footer-wrapper .one {
   background: #F88D2F;
 }
 @media (min-width: 50em) {
-  /* line 22, ../sass/partials/design/regions/_footer.scss */
+  /* line 23, ../sass/partials/design/regions/_footer.scss */
   .front .footer-wrapper .one {
     width: 25%;
     float: left;
@@ -506,12 +483,12 @@ menu-trigger span:nth-child(3) {
   margin-left: 0;
   clear: none;
 }
-/* line 28, ../sass/partials/design/regions/_footer.scss */
+/* line 29, ../sass/partials/design/regions/_footer.scss */
 .front .footer-wrapper .two {
   background: #C35C3B;
 }
 @media (min-width: 50em) {
-  /* line 28, ../sass/partials/design/regions/_footer.scss */
+  /* line 29, ../sass/partials/design/regions/_footer.scss */
   .front .footer-wrapper .two {
     width: 25%;
     float: left;
@@ -528,12 +505,12 @@ menu-trigger span:nth-child(3) {
   margin-left: 25%;
   clear: none;
 }
-/* line 34, ../sass/partials/design/regions/_footer.scss */
+/* line 35, ../sass/partials/design/regions/_footer.scss */
 .front .footer-wrapper .three {
   background: #783A50;
 }
 @media (min-width: 50em) {
-  /* line 34, ../sass/partials/design/regions/_footer.scss */
+  /* line 35, ../sass/partials/design/regions/_footer.scss */
   .front .footer-wrapper .three {
     width: 25%;
     float: left;
@@ -550,12 +527,12 @@ menu-trigger span:nth-child(3) {
   margin-left: 50%;
   clear: none;
 }
-/* line 40, ../sass/partials/design/regions/_footer.scss */
+/* line 41, ../sass/partials/design/regions/_footer.scss */
 .front .footer-wrapper .four {
   background: #46225E;
 }
 @media (min-width: 50em) {
-  /* line 40, ../sass/partials/design/regions/_footer.scss */
+  /* line 41, ../sass/partials/design/regions/_footer.scss */
   .front .footer-wrapper .four {
     width: 25%;
     float: right;
@@ -596,25 +573,6 @@ menu-trigger span:nth-child(3) {
   clear: none;
 }
 
-@media (min-width: 50em) {
-  /* line 8, ../sass/partials/design/regions/_header.scss */
-  .main-nav {
-    width: 65.95745%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-  }
-}
-/* line 92, ../../vendor/bundle/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
-.no-mq .main-nav {
-  width: 65.95745%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-}
-
 /* line 14, ../sass/partials/design/regions/_header.scss */
 .header-wrapper {
   padding: 1em 0;
@@ -622,15 +580,7 @@ menu-trigger span:nth-child(3) {
   background-image: linear-gradient(135deg, #3b1d61 0%, #562a59 14%, #cb6039 73%, #ff942d 100%);
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.34);
           box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.34);
-  -webkit-transition: all .5s ease-in-out;
-          transition: all .5s ease-in-out;
   z-index: 1;
-}
-/* line 20, ../sass/partials/design/regions/_header.scss */
-.header-wrapper.open {
-  height: 100%;
-  -webkit-transition: all .5s ease-in-out;
-          transition: all .5s ease-in-out;
 }
 
 /* line 1, ../sass/partials/design/regions/_main.scss */
@@ -672,17 +622,18 @@ html {
 html body {
   margin: 0;
   height: 100%;
-  background: white;
+  background: #111111;
   overflow-x: hidden;
+  position: relative;
 }
 
-/* line 11, ../sass/partials/design/regions/_body.scss */
+/* line 12, ../sass/partials/design/regions/_body.scss */
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
 
-/* line 13, ../sass/partials/design/regions/_body.scss */
+/* line 14, ../sass/partials/design/regions/_body.scss */
 .wrap {
   max-width: 1200px;
   margin: 0 auto;
@@ -694,18 +645,18 @@ html body {
   clear: both;
 }
 
-/* line 19, ../sass/partials/design/regions/_body.scss */
+/* line 20, ../sass/partials/design/regions/_body.scss */
 .site-wrapper {
   margin: 0 auto;
   max-width: 1200px;
 }
 
-/* line 24, ../sass/partials/design/regions/_body.scss */
+/* line 25, ../sass/partials/design/regions/_body.scss */
 main, header, footer, section, aside {
   display: block;
 }
 
-/* line 27, ../sass/partials/design/regions/_body.scss */
+/* line 28, ../sass/partials/design/regions/_body.scss */
 html, body {
   margin: 0;
   padding: 0;

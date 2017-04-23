@@ -6,6 +6,7 @@ html {
 	  height: 100%;
     background: $site-bg;
     overflow-x: hidden;
+    position: relative;
 	}
 }
 *, *:before, *:after { box-sizing: inherit; }
