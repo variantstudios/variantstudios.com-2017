@@ -1,3 +1,14 @@
+.overlay {
+ position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  background-image: linear-gradient(135deg, #3B1D61 0%, #562A59 14%, #CB6039 73%, #FF942D 100%);
+}
+
 .header-wrapper {
   position: relative;
 }
@@ -10,87 +21,45 @@
   background: url("../images/menu-corner.svg") center center no-repeat ;
   z-index: 1;
   .menu-trigger {
-    
     position: relative;
-    top: 30px;
-    right: -180px;
-    // cursor: default;
-      width: 30px;
-      height: 20px;
-      //position: relative;
-      //margin: 50px auto;
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-      -webkit-transition: .5s ease-in-out;
-      -moz-transition: .5s ease-in-out;
-      -o-transition: .5s ease-in-out;
-      transition: .5s ease-in-out;
-      cursor: pointer;
-      span {
-          display: block;
-          position: absolute;
-          height: 4px;
-          width: 100%;
-          //background: #d3531a;
-          border-radius: 9px;
-          opacity: 1;
-          left: 0;
-          transform: rotate(0deg);
-          transition: .25s ease-in-out;
-      }
+    top: 0px;
+    right: -145px;
+    cursor: pointer;
   }
 }
-.menu-trigger span:nth-child(1) {
-  top: 0px;
-  background: #552959;
+
+svg path, svg line {
+    stroke: #fff;
+    stroke-width: 6px;
+    stroke-linecap: round;
+    fill: none;
+}
+.trigger {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 5;
+  top: 0;
+  left: 0;
 }
 
-.menu-trigger span:nth-child(2) {
-  top: 10px;
-  background: #BE5B3E;
+ul.menu {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 160px;
+    left: 100px;
+    opacity: 0;
+    li {
+      display: block;
+      a {
+        color: #fff;
+        font-size: 2.5em;
+        text-decoration: none;
+      }
+    }
 }
-  menu-trigger span:nth-child(3) {
-  top: 10px;
-  background: #552959;
-}
-
-.menu-trigger span:nth-child(4) {
-  top: 20px;
-  background: #F08431;
-}
-
-.menu-trigger.open span:nth-child(1) {
-  top: 10px;
-  width: 0%;
-  left: 50%;
-}
-
-.menu-trigger.open span:nth-child(2) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  //transform-origin: 50% 50%;
-}
-
-.menu-trigger.open span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  background: #552959;
-      top: 10px;
-}
-
-.menu-trigger.open span:nth-child(4) {
-  top: 18px;
-  width: 0%;
-  left: 50%;
-}
-
-
 
 // .menu {
 //   padding: 0;
