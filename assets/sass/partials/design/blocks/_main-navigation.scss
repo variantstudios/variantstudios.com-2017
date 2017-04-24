@@ -37,6 +37,7 @@ svg path, svg line {
 }
 #hamburger {
   display: none;
+  transform: scale(.6);
 }
 .trigger {
   position: absolute;
@@ -72,7 +73,7 @@ ul.menu {
     }
 }
 .menu-text {
-    margin: -35px 0 0 36px;
+    margin: -42px 0 0 36px;
     color: rgba(126, 126, 126, 0.45);
     font-size: .7em;
     opacity: 0;

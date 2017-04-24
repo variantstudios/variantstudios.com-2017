@@ -11,15 +11,19 @@ body.notfront {
     margin-top: 80px;
     opacity: 0;
   }
+  main {
+   @include clearfix;
+    padding: 0 2em;
+}
 }
 body.front {
   .main-wrapper {
     margin-top: 0px;
     opacity: 0;
   }
+  main {
+    @include clearfix;
+    padding: 0;
+  }
 }
-main {
-  @include clearfix;
-  padding: 0;
 
-}
