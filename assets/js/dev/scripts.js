@@ -16,7 +16,8 @@ $('.front-slider').slick({
   infinite: true,
   slidesToShow: 3,
   slidesToScroll: 3,
-  adaptiveHeight: true
+  adaptiveHeight: true,
+  arrows: false
 });
 
 // function setHeight() {

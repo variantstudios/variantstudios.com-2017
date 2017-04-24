@@ -376,9 +376,12 @@ svg path, svg line {
 /* line 38, ../sass/partials/design/blocks/_main-navigation.scss */
 #hamburger {
   display: none;
+  -webkit-transform: scale(0.6);
+      -ms-transform: scale(0.6);
+          transform: scale(0.6);
 }
 
-/* line 41, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 42, ../sass/partials/design/blocks/_main-navigation.scss */
 .trigger {
   position: absolute;
   width: 100%;
@@ -389,7 +392,7 @@ svg path, svg line {
   left: 0;
 }
 
-/* line 51, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 52, ../sass/partials/design/blocks/_main-navigation.scss */
 ul.menu {
   position: absolute;
   padding: 0;
@@ -399,11 +402,11 @@ ul.menu {
   opacity: 0;
   z-index: 0;
 }
-/* line 59, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 60, ../sass/partials/design/blocks/_main-navigation.scss */
 ul.menu li {
   display: block;
 }
-/* line 61, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 62, ../sass/partials/design/blocks/_main-navigation.scss */
 ul.menu li a {
   color: #fff;
   font-size: 2.2em;
@@ -412,16 +415,16 @@ ul.menu li a {
           transition: all .1s ease-in;
   font-family: "sofia-pro", sans-serif;
 }
-/* line 67, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 68, ../sass/partials/design/blocks/_main-navigation.scss */
 ul.menu li a:hover {
   margin-left: 10px;
   -webkit-transition: all .3s ease-out;
           transition: all .3s ease-out;
 }
 
-/* line 74, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 75, ../sass/partials/design/blocks/_main-navigation.scss */
 .menu-text {
-  margin: -35px 0 0 36px;
+  margin: -42px 0 0 36px;
   color: rgba(126, 126, 126, 0.45);
   font-size: .7em;
   opacity: 0;
@@ -632,19 +635,28 @@ body.notfront .main-wrapper {
   margin-top: 80px;
   opacity: 0;
 }
+/* line 14, ../sass/partials/design/regions/_main.scss */
+body.notfront main {
+  padding: 0 2em;
+}
+/* line 13, ../../vendor/bundle/gems/toolkit-2.3.0/stylesheets/toolkit/_clearfix.scss */
+body.notfront main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-/* line 16, ../sass/partials/design/regions/_main.scss */
+/* line 20, ../sass/partials/design/regions/_main.scss */
 body.front .main-wrapper {
   margin-top: 0px;
   opacity: 0;
 }
-
-/* line 21, ../sass/partials/design/regions/_main.scss */
-main {
+/* line 24, ../sass/partials/design/regions/_main.scss */
+body.front main {
   padding: 0;
 }
 /* line 13, ../../vendor/bundle/gems/toolkit-2.3.0/stylesheets/toolkit/_clearfix.scss */
-main:after {
+body.front main:after {
   content: "";
   display: table;
   clear: both;
