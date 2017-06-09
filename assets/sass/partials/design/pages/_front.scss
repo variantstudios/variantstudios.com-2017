@@ -1,3 +1,173 @@
 .front {
-	
+  .slide {
+    position: relative;
+    height: 300px;
+   @include breakpoint($bp-medium, $no-query: '.no-mq') {
+      height: 100vh;
+      width: 33.3%;
+      float: left;
+      height: calc(100vh - 182px)  
+    }
+    @include breakpoint($bp-large, $no-query: '.no-mq') {
+        height: calc(100vh - 50px);   
+    }
+    h3 {
+      position: absolute;
+      bottom: 0px;
+      z-index: 0;
+      display: block;
+      width: 100%;
+    }
+    &:before {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 68%, rgba(0, 0, 0, 0.65) 100%);
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+
+  
+  // Footer Tabs
+  .footer-wrapper {
+  background: #111;
+  width: 100%;
+  z-index: 0;
+  overflow: hidden;
+  @include breakpoint($bp-medium, $no-query: '.no-mq') {
+      height: 100px;
+      position: absolute;
+      bottom: 0;
+    }
+  @include breakpoint($bp-large, $no-query: '.no-mq') {
+        height: 50px;
+    }
+  // Footer Tab Title
+  h3 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #fff;
+    height: 50px;
+    padding-top: 12px;
+  }
+  // Footer Tab Style
+  div.block {
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    
+  }
+
+  // Footer Tab - Hidden Info Box
+  .footer-block-info {
+    background: #fff;
+    padding: 2em 2em;
+    transition: all .6s ease-in;
+    text-align: left;
+    @include breakpoint($bp-medium, $no-query: '.no-mq') {
+        position: fixed;
+        border-radius: 0 100px 0 0;
+        width: 50%;
+        left: 0;
+        z-index: 2;
+        bottom: -100%;
+        box-shadow: 0 2px 14px 0 rgba(0,0,0,0.81);
+    }
+    @include breakpoint($bp-large, $no-query: '.no-mq') {
+        width: 25%;
+    }
+    @include breakpoint($bp-xlarge) {
+      padding: 3em 3em;
+    }
+    h4 {
+    }
+  }
+  // Footer Tab - Showing Info Box on click
+  .open.block {
+      height: auto;
+      @include breakpoint($bp-medium, $no-query: '.no-mq') {
+        height: 50px;
+    }
+      .footer-block-info {
+          transition: all .6s ease-in;
+          @include breakpoint($bp-medium, $no-query: '.no-mq') {
+            bottom: 0;
+          }
+      }
+  }
+
+  // Footer Tabs - Color Changes and Layout
+  .one {
+    background: #F88D2F;
+      @include breakpoint($bp-medium, $no-query: '.no-mq') {
+        @include grid-span(6,1,$gutter:0);
+      }
+      @include breakpoint($bp-large, $no-query: '.no-mq') {
+        @include grid-span(3,1,$gutter:0);
+      }
+    }
+  .two {
+    background: #C35C3B;
+      @include breakpoint($bp-medium, $no-query: '.no-mq') {
+        @include grid-span(6,7,$gutter:0);
+      }
+      @include breakpoint($bp-large, $no-query: '.no-mq') {
+        @include grid-span(3,4,$gutter:0);
+      }
+      .footer-block-info {
+        @include breakpoint($bp-medium, $no-query: '.no-mq') {
+            left: 25%;
+        }
+      }
+    }
+  .three {
+    background: #783A50;
+      @include breakpoint($bp-medium, $no-query: '.no-mq') {
+        @include grid-span(6,1,$gutter:0);
+        clear: both;
+      }
+      @include breakpoint($bp-large, $no-query: '.no-mq') {
+        @include grid-span(3,7,$gutter:0);
+      }
+      .footer-block-info {
+        @include breakpoint($bp-medium, $no-query: '.no-mq') {
+            left: 50%;
+        }
+      }
+    }
+  .four {
+    background: #46225E;
+    @include breakpoint($bp-medium, $no-query: '.no-mq') {
+        @include grid-span(6,7,$gutter:0);
+        clear: right;
+      }
+      @include breakpoint($bp-large, $no-query: '.no-mq') {
+        @include grid-span(3,10,$gutter:0);
+      }
+      .footer-block-info {
+        @include breakpoint($bp-medium, $no-query: '.no-mq') {
+            left: 50%;
+            border-radius: 100px 0 0 0;
+        }
+        @include breakpoint($bp-large, $no-query: '.no-mq') {
+            left: 75%;
+        }
+      }
+    }
+  }
+
+  // Overlay for when footer block is open
+  &.open-overlay {
+    .main-wrapper {
+      opacity: 0.4 !important;
+      transition: all .3s linear;
+    }
+  }
+  .main-wrapper {
+      transition: all .3s linear;
+    }
 }

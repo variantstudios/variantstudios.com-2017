@@ -5,18 +5,14 @@
   }
 }
 
-// .main-nav {
-//   @include breakpoint($bp-medium, $no-query: ".no-mq") {
-//     @include grid-span(8,5);
-//   }
-// }
-
 .header-wrapper  {
-  padding: 1em 0;
-  background-image: linear-gradient(135deg, #3B1D61 0%, #562A59 14%, #CB6039 73%, #FF942D 100%);
+  padding: 2em 0;
+  @include vs-grad;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,0.34);
   z-index: 1;
-  position: fixed;
   width: 100%;
   top:0;
+  @include breakpoint($bp-large, $no-query: '.no-mq') {
+    position: fixed;
+  }
 }
