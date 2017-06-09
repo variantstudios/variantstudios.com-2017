@@ -64,3 +64,7 @@
   -o-transition: $element $effect $duration;
   transition: $element $effect $duration;
 }
+
+@mixin vs-grad {
+  background-image: linear-gradient(135deg, #3b1d61 0%, #562a59 14%, #cb6039 73%, #ff942d 100%);
+}

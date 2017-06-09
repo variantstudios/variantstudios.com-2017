@@ -95,21 +95,54 @@ h6 {
 h1, h2, h3, h4, h5, h6 {
   margin: 16px 0;
   line-height: 1.3;
-  color: #0f7abd;
+  color: #ff942d;
   font-family: "sofia-pro", sans-serif;
+  font-weight: normal;
+}
+
+/* line 25, ../sass/partials/styleguide/type/_headings.scss */
+.heading-link {
+  margin: 0;
+  padding: 2em 1em;
+  position: relative;
+}
+/* line 29, ../sass/partials/styleguide/type/_headings.scss */
+.heading-link:before {
+  content: '';
+  position: absolute;
+  height: 0.1em;
+  background: #ff942d;
+  width: 2em;
+  margin-top: -0.75em;
+}
+/* line 37, ../sass/partials/styleguide/type/_headings.scss */
+.heading-link a, .heading-link a:visited {
+  color: inherit;
+}
+
+/* line 42, ../sass/partials/styleguide/type/_headings.scss */
+.heading-link.light {
+  color: #fff;
+  text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.35);
+}
+/* line 45, ../sass/partials/styleguide/type/_headings.scss */
+.heading-link.light:before {
+  background: #fff;
+  -webkit-box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.35);
+          box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.35);
 }
 
 /* line 1, ../sass/partials/styleguide/type/_links.scss */
 a {
-  color: #0f7abd;
+  color: #ff942d;
 }
 /* line 3, ../sass/partials/styleguide/type/_links.scss */
 a:hover {
-  color: #1398ec;
+  color: #ffae60;
 }
 /* line 6, ../sass/partials/styleguide/type/_links.scss */
 a:visited {
-  color: #0b5b8e;
+  color: #f97a00;
 }
 
 /* line 12, ../sass/partials/styleguide/type/_links.scss */
@@ -117,17 +150,22 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   text-decoration: none;
 }
 
-/* line 18, ../sass/partials/styleguide/type/_links.scss */
+/* line 17, ../sass/partials/styleguide/type/_links.scss */
+a.read-more-link {
+  font-weight: 300;
+}
+
+/* line 21, ../sass/partials/styleguide/type/_links.scss */
 div.btn {
   display: inline-block;
 }
-/* line 20, ../sass/partials/styleguide/type/_links.scss */
+/* line 23, ../sass/partials/styleguide/type/_links.scss */
 div.btn a {
   display: block;
   text-decoration: none;
   text-align: center;
-  background-color: #0f7abd;
-  border: 1px solid #0d6ba5;
+  background-color: #ff942d;
+  border: 1px solid #ff8714;
   border-radius: 2px;
   color: white;
   cursor: pointer;
@@ -139,9 +177,9 @@ div.btn a {
 }
 /* line 56, ../sass/partials/global/_mixins.scss */
 div.btn a:hover {
-  background-color: #0e74b4;
+  background-color: #ff8f23;
 }
-/* line 27, ../sass/partials/styleguide/type/_links.scss */
+/* line 30, ../sass/partials/styleguide/type/_links.scss */
 div.btn a:hover {
   margin-top: -0.15em;
   margin: -0.15em 0 0.15em;
@@ -184,7 +222,7 @@ input[type="text"], input[type="email"], input[type="name"], input[type="passwor
 }
 /* line 9, ../sass/partials/styleguide/forms/_inputs.scss */
 input[type="text"]:active, input[type="text"]:focus, input[type="email"]:active, input[type="email"]:focus, input[type="name"]:active, input[type="name"]:focus, input[type="password"]:active, input[type="password"]:focus, input[type="file"]:active, input[type="file"]:focus {
-  border: 1px solid #0f7abd;
+  border: 1px solid #ff942d;
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
@@ -203,7 +241,7 @@ textarea {
 }
 /* line 9, ../sass/partials/styleguide/forms/_textarea.scss */
 textarea:active, textarea:focus {
-  border: 1px solid #0f7abd;
+  border: 1px solid #ff942d;
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
@@ -211,28 +249,88 @@ textarea:active, textarea:focus {
 
 /* line 1, ../sass/partials/styleguide/forms/_buttons.scss */
 input[type="submit"] {
-  background-color: #999999;
-  border: 1px solid #6286bd;
-  border-radius: 3px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  background-color: #ff942d;
+  border: 1px solid #f97a00;
+  border-radius: 2px;
   color: white;
   cursor: pointer;
   padding: .5em 1.25em;
-  font-size: 100%;
+  font-size: 95%;
   font-family: "sofia-pro", sans-serif;
-  display: inline-block;
-  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2), inset 0px 2px 0px 0px white;
-          box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2), inset 0px 2px 0px 0px white;
-  border-radius: 3px;
-  padding: 10px 25px;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  font-size: .8em;
-  color: #373737;
+  -webkit-transition: all linear 0.2s;
+  transition: all linear 0.2s;
   cursor: pointer;
+  width: 100%;
+  padding: 1em;
+  font-weight: 700;
 }
 /* line 56, ../sass/partials/global/_mixins.scss */
 input[type="submit"]:hover {
-  background-color: #949494;
+  background-color: #ff8f23;
+}
+/* line 12, ../sass/partials/styleguide/forms/_buttons.scss */
+input[type="submit"]:hover {
+  background: #f97a00;
+  border-color: #e06e00;
+}
+
+/* line 19, ../sass/partials/styleguide/forms/_buttons.scss */
+.btn {
+  display: inline-block;
+  margin-right: .5em;
+  margin-bottom: 1em;
+}
+/* line 23, ../sass/partials/styleguide/forms/_buttons.scss */
+.btn a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  background-color: #ff942d;
+  border: 1px solid #f97a00;
+  border-radius: 2px;
+  color: white;
+  cursor: pointer;
+  padding: .5em 1.25em;
+  font-size: 95%;
+  font-family: "sofia-pro", sans-serif;
+  -webkit-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+}
+/* line 56, ../sass/partials/global/_mixins.scss */
+.btn a:hover {
+  background-color: #ff8f23;
+}
+/* line 30, ../sass/partials/styleguide/forms/_buttons.scss */
+.btn a:hover {
+  background: #f97a00;
+  border-color: #e06e00;
+}
+/* line 34, ../sass/partials/styleguide/forms/_buttons.scss */
+.btn a i {
+  vertical-align: middle;
+  padding-left: .5em;
+}
+/* line 39, ../sass/partials/styleguide/forms/_buttons.scss */
+.btn.alt a {
+  background-color: #562a59;
+  border: 1px solid #351a36;
+  border-radius: 2px;
+  color: white;
+  cursor: pointer;
+  padding: .5em 1.25em;
+  font-size: 95%;
+}
+/* line 56, ../sass/partials/global/_mixins.scss */
+.btn.alt a:hover {
+  background-color: #4f2752;
+}
+/* line 41, ../sass/partials/styleguide/forms/_buttons.scss */
+.btn.alt a:hover {
+  background: #351a36;
+  border-color: #241125;
 }
 
 /* line 2, ../sass/partials/styleguide/forms/_label.scss */
@@ -287,7 +385,7 @@ table td {
 
 /* line 24, ../sass/partials/styleguide/misc/_table.scss */
 table.sticky-enabled thead th, table.sticky-header thead th {
-  border-bottom: 3px solid #0f7abd;
+  border-bottom: 3px solid #ff942d;
   padding: 1em 0 1em 2em;
 }
 
@@ -295,18 +393,156 @@ table.sticky-enabled thead th, table.sticky-header thead th {
 ul.pager {
   margin: 1em 0 0;
   padding: 1em 0 0;
-  border-top: 1px solid #d68603;
+  border-top: 1px solid #452248;
 }
 /* line 5, ../sass/partials/styleguide/misc/_pager.scss */
 ul.pager li {
   display: inline-block;
   list-style: none;
   padding-right: .5em;
-  color: #0f7abd;
+  color: #ff942d;
 }
 /* line 10, ../sass/partials/styleguide/misc/_pager.scss */
 ul.pager li a:visited {
-  color: #0f7abd;
+  color: #ff942d;
+}
+
+/* line 1, ../sass/partials/styleguide/misc/_styleguide.scss */
+.styleguide-wrapper {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 6em 0;
+}
+
+/* line 6, ../sass/partials/styleguide/misc/_styleguide.scss */
+.sg-block {
+  padding-bottom: 3em;
+  position: relative;
+}
+/* line 9, ../sass/partials/styleguide/misc/_styleguide.scss */
+.sg-block .highlighter-rouge {
+  background: #f9f9f9;
+  padding: 1em 2em;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  clear: both;
+}
+/* line 16, ../sass/partials/styleguide/misc/_styleguide.scss */
+.sg-block .sg-label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ccc;
+}
+/* line 21, ../sass/partials/styleguide/misc/_styleguide.scss */
+.sg-block .swatch {
+  display: inline-block;
+  width: 200px;
+  padding: 5em 0 0;
+  margin-right: 1em;
+}
+/* line 26, ../sass/partials/styleguide/misc/_styleguide.scss */
+.sg-block .swatch span {
+  display: block;
+  background: #fff;
+  padding: 1em 0;
+  font-family: "sofia-pro", sans-serif;
+  font-weight: 700;
+}
+/* line 33, ../sass/partials/styleguide/misc/_styleguide.scss */
+.sg-block .swatch.color-one {
+  background: #ff942d;
+}
+/* line 35, ../sass/partials/styleguide/misc/_styleguide.scss */
+.sg-block .swatch.color-one span {
+  color: #ff942d;
+}
+/* line 39, ../sass/partials/styleguide/misc/_styleguide.scss */
+.sg-block .swatch.color-two {
+  background: #562a59;
+}
+/* line 41, ../sass/partials/styleguide/misc/_styleguide.scss */
+.sg-block .swatch.color-two span {
+  color: #562a59;
+}
+/* line 45, ../sass/partials/styleguide/misc/_styleguide.scss */
+.sg-block .swatch.color-three {
+  background-image: -webkit-linear-gradient(315deg, #3b1d61 0%, #562a59 14%, #cb6039 73%, #ff942d 100%);
+  background-image: linear-gradient(135deg, #3b1d61 0%, #562a59 14%, #cb6039 73%, #ff942d 100%);
+}
+/* line 47, ../sass/partials/styleguide/misc/_styleguide.scss */
+.sg-block .swatch.color-three span {
+  color: #000;
+}
+/* line 52, ../sass/partials/styleguide/misc/_styleguide.scss */
+.sg-block .main-nav, .sg-block .contact-form {
+  margin-bottom: 2em;
+}
+/* line 55, ../sass/partials/styleguide/misc/_styleguide.scss */
+.sg-block .heading-link.light {
+  background: #e2e2e2;
+}
+
+@media (min-width: 50em) {
+  /* line 1, ../sass/partials/styleguide/layouts/_layouts.scss */
+  .cols {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .cols {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/* line 6, ../sass/partials/styleguide/layouts/_layouts.scss */
+.cols .col {
+  margin: 2em 0;
+}
+
+@media (min-width: 50em) {
+  /* line 11, ../sass/partials/styleguide/layouts/_layouts.scss */
+  .cols-2 .col {
+    width: 45%;
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .cols-2 .col {
+  width: 45%;
+}
+
+@media (min-width: 50em) {
+  /* line 19, ../sass/partials/styleguide/layouts/_layouts.scss */
+  .cols-3 .col {
+    width: 30%;
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .cols-3 .col {
+  width: 30%;
+}
+
+@media (min-width: 50em) {
+  /* line 26, ../sass/partials/styleguide/layouts/_layouts.scss */
+  .cols-4 .col {
+    width: 22%;
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .cols-4 .col {
+  width: 22%;
+}
+
+/* line 34, ../sass/partials/styleguide/layouts/_layouts.scss */
+.center .col {
+  text-align: center;
 }
 
 /* line 1, ../sass/partials/design/blocks/_logo.scss */
@@ -323,7 +559,7 @@ ul.pager li a:visited {
     margin: 0;
   }
 }
-/* line 92, ../../vendor/bundle/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
 .no-mq .logo img {
   margin: 0;
 }
@@ -336,18 +572,18 @@ ul.pager li a:visited {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: 99 !important;
   opacity: 0;
   background-image: -webkit-linear-gradient(315deg, #3b1d61 0%, #562a59 14%, #cb6039 73%, #ff942d 100%);
   background-image: linear-gradient(135deg, #3b1d61 0%, #562a59 14%, #cb6039 73%, #ff942d 100%);
 }
 
-/* line 13, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 14, ../sass/partials/design/blocks/_main-navigation.scss */
 .header-wrapper {
   position: relative;
 }
 
-/* line 16, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 17, ../sass/partials/design/blocks/_main-navigation.scss */
 .menu-corner {
   height: 130px;
   width: 250px;
@@ -355,33 +591,77 @@ ul.pager li a:visited {
   top: -5px;
   right: 0px;
   background: url("../images/menu-corner.svg") center center no-repeat;
-  z-index: 1;
+  z-index: 999;
 }
-/* line 24, ../sass/partials/design/blocks/_main-navigation.scss */
+@media (min-width: 50em) {
+  /* line 17, ../sass/partials/design/blocks/_main-navigation.scss */
+  .menu-corner {
+    width: 400px;
+    background-size: 100%;
+    height: 180px;
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .menu-corner {
+  width: 400px;
+  background-size: 100%;
+  height: 180px;
+}
+/* line 30, ../sass/partials/design/blocks/_main-navigation.scss */
 .menu-corner .menu-trigger {
   position: relative;
   top: 0px;
   right: -145px;
   cursor: pointer;
 }
+@media (min-width: 50em) {
+  /* line 30, ../sass/partials/design/blocks/_main-navigation.scss */
+  .menu-corner .menu-trigger {
+    top: 35px;
+    left: -webkit-calc(50% + 55px);
+    left: calc(50% + 55px);
+    right: auto;
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .menu-corner .menu-trigger {
+  top: 35px;
+  left: -webkit-calc(50% + 55px);
+  left: calc(50% + 55px);
+  right: auto;
+}
 
-/* line 32, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 43, ../sass/partials/design/blocks/_main-navigation.scss */
 svg path, svg line {
   stroke: #fff;
-  stroke-width: 6px;
+  stroke-width: 3px;
   stroke-linecap: round;
   fill: none;
 }
 
-/* line 38, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 49, ../sass/partials/design/blocks/_main-navigation.scss */
 #hamburger {
   display: none;
   -webkit-transform: scale(0.6);
       -ms-transform: scale(0.6);
           transform: scale(0.6);
 }
+@media (min-width: 50em) {
+  /* line 49, ../sass/partials/design/blocks/_main-navigation.scss */
+  #hamburger {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq #hamburger {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
 
-/* line 42, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 56, ../sass/partials/design/blocks/_main-navigation.scss */
 .trigger {
   position: absolute;
   width: 100%;
@@ -392,7 +672,7 @@ svg path, svg line {
   left: 0;
 }
 
-/* line 52, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 66, ../sass/partials/design/blocks/_main-navigation.scss */
 ul.menu {
   position: absolute;
   padding: 0;
@@ -400,29 +680,40 @@ ul.menu {
   top: 140px;
   left: -100px;
   opacity: 0;
-  z-index: 0;
+  z-index: 99 !important;
 }
-/* line 60, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 74, ../sass/partials/design/blocks/_main-navigation.scss */
 ul.menu li {
   display: block;
 }
-/* line 62, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 76, ../sass/partials/design/blocks/_main-navigation.scss */
 ul.menu li a {
   color: #fff;
-  font-size: 2.2em;
+  font-size: 2em;
   text-decoration: none;
   -webkit-transition: all .1s ease-in;
           transition: all .1s ease-in;
   font-family: "sofia-pro", sans-serif;
+  padding: .15em 0;
 }
-/* line 68, ../sass/partials/design/blocks/_main-navigation.scss */
+@media (min-width: 50em) {
+  /* line 76, ../sass/partials/design/blocks/_main-navigation.scss */
+  ul.menu li a {
+    font-size: 3em;
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq ul.menu li a {
+  font-size: 3em;
+}
+/* line 86, ../sass/partials/design/blocks/_main-navigation.scss */
 ul.menu li a:hover {
   margin-left: 10px;
   -webkit-transition: all .3s ease-out;
           transition: all .3s ease-out;
 }
 
-/* line 75, ../sass/partials/design/blocks/_main-navigation.scss */
+/* line 93, ../sass/partials/design/blocks/_main-navigation.scss */
 .menu-text {
   margin: -42px 0 0 36px;
   color: rgba(126, 126, 126, 0.45);
@@ -448,17 +739,74 @@ ul.menu li a:hover {
   height: 100vh;
 }
 
-/* line 17, ../sass/partials/design/blocks/_slick.scss */
-.slick-slide h3 {
-  position: absolute;
-  bottom: 75px;
-  margin-left: 40px;
-  color: #FFF;
-  z-index: 1;
-  display: block;
+/* line 1, ../sass/partials/design/pages/_contact.scss */
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fafafa;
 }
-/* line 25, ../sass/partials/design/blocks/_slick.scss */
-.slick-slide:before {
+/* line 6, ../sass/partials/design/pages/_contact.scss */
+.contact-form form {
+  width: 50%;
+  padding: 2em;
+}
+/* line 10, ../sass/partials/design/pages/_contact.scss */
+.contact-form .map-embed {
+  width: 50%;
+}
+
+/* line 2, ../sass/partials/design/pages/_front.scss */
+.front .slide {
+  position: relative;
+  height: 300px;
+}
+@media (min-width: 50em) {
+  /* line 2, ../sass/partials/design/pages/_front.scss */
+  .front .slide {
+    height: 100vh;
+    width: 33.3%;
+    float: left;
+    height: -webkit-calc(100vh - 182px);
+    height: calc(100vh - 182px);
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .front .slide {
+  height: 100vh;
+  width: 33.3%;
+  float: left;
+  height: -webkit-calc(100vh - 182px);
+  height: calc(100vh - 182px);
+}
+@media (min-width: 62.5em) {
+  /* line 2, ../sass/partials/design/pages/_front.scss */
+  .front .slide {
+    height: -webkit-calc(100vh - 50px);
+    height: calc(100vh - 50px);
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .front .slide {
+  height: -webkit-calc(100vh - 50px);
+  height: calc(100vh - 50px);
+}
+/* line 14, ../sass/partials/design/pages/_front.scss */
+.front .slide h3 {
+  position: absolute;
+  bottom: 0px;
+  z-index: 0;
+  display: block;
+  width: 100%;
+}
+/* line 21, ../sass/partials/design/pages/_front.scss */
+.front .slide:before {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(68%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.65)));
   background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 68%, rgba(0, 0, 0, 0.65) 100%);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 68%, rgba(0, 0, 0, 0.65) 100%);
@@ -469,35 +817,153 @@ ul.menu li a:hover {
   left: 0;
   right: 0;
 }
-
-/* line 5, ../sass/partials/design/regions/_footer.scss */
+/* line 35, ../sass/partials/design/pages/_front.scss */
 .front .footer-wrapper {
   background: #111;
+  width: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+@media (min-width: 50em) {
+  /* line 35, ../sass/partials/design/pages/_front.scss */
+  .front .footer-wrapper {
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .front .footer-wrapper {
+  height: 100px;
   position: absolute;
   bottom: 0;
-  width: 100%;
-  height: 50px;
-  z-index: 1;
 }
-/* line 12, ../sass/partials/design/regions/_footer.scss */
+@media (min-width: 62.5em) {
+  /* line 35, ../sass/partials/design/pages/_front.scss */
+  .front .footer-wrapper {
+    height: 50px;
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .front .footer-wrapper {
+  height: 50px;
+}
+/* line 49, ../sass/partials/design/pages/_front.scss */
 .front .footer-wrapper h3 {
   margin: 0;
+  font-size: 1.1em;
   color: #fff;
+  height: 50px;
+  padding-top: 12px;
 }
-/* line 16, ../sass/partials/design/regions/_footer.scss */
-.front .footer-wrapper div {
+/* line 57, ../sass/partials/design/pages/_front.scss */
+.front .footer-wrapper div.block {
   height: 50px;
   text-align: center;
-  padding-top: 10px;
   cursor: pointer;
   position: relative;
 }
-/* line 23, ../sass/partials/design/regions/_footer.scss */
+/* line 66, ../sass/partials/design/pages/_front.scss */
+.front .footer-wrapper .footer-block-info {
+  background: #fff;
+  padding: 2em 2em;
+  -webkit-transition: all .6s ease-in;
+          transition: all .6s ease-in;
+  text-align: left;
+}
+@media (min-width: 50em) {
+  /* line 66, ../sass/partials/design/pages/_front.scss */
+  .front .footer-wrapper .footer-block-info {
+    position: fixed;
+    border-radius: 0 100px 0 0;
+    width: 50%;
+    left: 0;
+    z-index: 2;
+    bottom: -100%;
+    -webkit-box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.81);
+            box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.81);
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .front .footer-wrapper .footer-block-info {
+  position: fixed;
+  border-radius: 0 100px 0 0;
+  width: 50%;
+  left: 0;
+  z-index: 2;
+  bottom: -100%;
+  -webkit-box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.81);
+          box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.81);
+}
+@media (min-width: 62.5em) {
+  /* line 66, ../sass/partials/design/pages/_front.scss */
+  .front .footer-wrapper .footer-block-info {
+    width: 25%;
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .front .footer-wrapper .footer-block-info {
+  width: 25%;
+}
+@media (min-width: 75em) {
+  /* line 66, ../sass/partials/design/pages/_front.scss */
+  .front .footer-wrapper .footer-block-info {
+    padding: 3em 3em;
+  }
+}
+/* line 90, ../sass/partials/design/pages/_front.scss */
+.front .footer-wrapper .open.block {
+  height: auto;
+}
+@media (min-width: 50em) {
+  /* line 90, ../sass/partials/design/pages/_front.scss */
+  .front .footer-wrapper .open.block {
+    height: 50px;
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .front .footer-wrapper .open.block {
+  height: 50px;
+}
+/* line 95, ../sass/partials/design/pages/_front.scss */
+.front .footer-wrapper .open.block .footer-block-info {
+  -webkit-transition: all .6s ease-in;
+          transition: all .6s ease-in;
+}
+@media (min-width: 50em) {
+  /* line 95, ../sass/partials/design/pages/_front.scss */
+  .front .footer-wrapper .open.block .footer-block-info {
+    bottom: 0;
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .front .footer-wrapper .open.block .footer-block-info {
+  bottom: 0;
+}
+/* line 104, ../sass/partials/design/pages/_front.scss */
 .front .footer-wrapper .one {
   background: #F88D2F;
 }
 @media (min-width: 50em) {
-  /* line 23, ../sass/partials/design/regions/_footer.scss */
+  /* line 104, ../sass/partials/design/pages/_front.scss */
+  .front .footer-wrapper .one {
+    width: 50%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .front .footer-wrapper .one {
+  width: 50%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
+}
+@media (min-width: 62.5em) {
+  /* line 104, ../sass/partials/design/pages/_front.scss */
   .front .footer-wrapper .one {
     width: 25%;
     float: left;
@@ -506,7 +972,7 @@ ul.menu li a:hover {
     clear: none;
   }
 }
-/* line 92, ../../vendor/bundle/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
 .no-mq .front .footer-wrapper .one {
   width: 25%;
   float: left;
@@ -514,12 +980,30 @@ ul.menu li a:hover {
   margin-left: 0;
   clear: none;
 }
-/* line 29, ../sass/partials/design/regions/_footer.scss */
+/* line 113, ../sass/partials/design/pages/_front.scss */
 .front .footer-wrapper .two {
   background: #C35C3B;
 }
 @media (min-width: 50em) {
-  /* line 29, ../sass/partials/design/regions/_footer.scss */
+  /* line 113, ../sass/partials/design/pages/_front.scss */
+  .front .footer-wrapper .two {
+    width: 50%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .front .footer-wrapper .two {
+  width: 50%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+@media (min-width: 62.5em) {
+  /* line 113, ../sass/partials/design/pages/_front.scss */
   .front .footer-wrapper .two {
     width: 25%;
     float: left;
@@ -528,7 +1012,7 @@ ul.menu li a:hover {
     clear: none;
   }
 }
-/* line 92, ../../vendor/bundle/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
 .no-mq .front .footer-wrapper .two {
   width: 25%;
   float: left;
@@ -536,12 +1020,42 @@ ul.menu li a:hover {
   margin-left: 25%;
   clear: none;
 }
-/* line 35, ../sass/partials/design/regions/_footer.scss */
+@media (min-width: 50em) {
+  /* line 121, ../sass/partials/design/pages/_front.scss */
+  .front .footer-wrapper .two .footer-block-info {
+    left: 25%;
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .front .footer-wrapper .two .footer-block-info {
+  left: 25%;
+}
+/* line 127, ../sass/partials/design/pages/_front.scss */
 .front .footer-wrapper .three {
   background: #783A50;
 }
 @media (min-width: 50em) {
-  /* line 35, ../sass/partials/design/regions/_footer.scss */
+  /* line 127, ../sass/partials/design/pages/_front.scss */
+  .front .footer-wrapper .three {
+    width: 50%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+    clear: both;
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .front .footer-wrapper .three {
+  width: 50%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
+  clear: both;
+}
+@media (min-width: 62.5em) {
+  /* line 127, ../sass/partials/design/pages/_front.scss */
   .front .footer-wrapper .three {
     width: 25%;
     float: left;
@@ -550,7 +1064,7 @@ ul.menu li a:hover {
     clear: none;
   }
 }
-/* line 92, ../../vendor/bundle/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
 .no-mq .front .footer-wrapper .three {
   width: 25%;
   float: left;
@@ -558,12 +1072,42 @@ ul.menu li a:hover {
   margin-left: 50%;
   clear: none;
 }
-/* line 41, ../sass/partials/design/regions/_footer.scss */
+@media (min-width: 50em) {
+  /* line 136, ../sass/partials/design/pages/_front.scss */
+  .front .footer-wrapper .three .footer-block-info {
+    left: 50%;
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .front .footer-wrapper .three .footer-block-info {
+  left: 50%;
+}
+/* line 142, ../sass/partials/design/pages/_front.scss */
 .front .footer-wrapper .four {
   background: #46225E;
 }
 @media (min-width: 50em) {
-  /* line 41, ../sass/partials/design/regions/_footer.scss */
+  /* line 142, ../sass/partials/design/pages/_front.scss */
+  .front .footer-wrapper .four {
+    width: 50%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    clear: right;
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .front .footer-wrapper .four {
+  width: 50%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  clear: right;
+}
+@media (min-width: 62.5em) {
+  /* line 142, ../sass/partials/design/pages/_front.scss */
   .front .footer-wrapper .four {
     width: 25%;
     float: right;
@@ -572,13 +1116,46 @@ ul.menu li a:hover {
     clear: none;
   }
 }
-/* line 92, ../../vendor/bundle/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
 .no-mq .front .footer-wrapper .four {
   width: 25%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
+}
+@media (min-width: 50em) {
+  /* line 151, ../sass/partials/design/pages/_front.scss */
+  .front .footer-wrapper .four .footer-block-info {
+    left: 50%;
+    border-radius: 100px 0 0 0;
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .front .footer-wrapper .four .footer-block-info {
+  left: 50%;
+  border-radius: 100px 0 0 0;
+}
+@media (min-width: 62.5em) {
+  /* line 151, ../sass/partials/design/pages/_front.scss */
+  .front .footer-wrapper .four .footer-block-info {
+    left: 75%;
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .front .footer-wrapper .four .footer-block-info {
+  left: 75%;
+}
+/* line 165, ../sass/partials/design/pages/_front.scss */
+.front.open-overlay .main-wrapper {
+  opacity: 0.4 !important;
+  -webkit-transition: all .3s linear;
+          transition: all .3s linear;
+}
+/* line 170, ../sass/partials/design/pages/_front.scss */
+.front .main-wrapper {
+  -webkit-transition: all .3s linear;
+          transition: all .3s linear;
 }
 
 /* line 1, ../sass/partials/design/regions/_header.scss */
@@ -595,7 +1172,7 @@ ul.menu li a:hover {
     clear: none;
   }
 }
-/* line 92, ../../vendor/bundle/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
 .no-mq .logo {
   width: 33.33333%;
   float: left;
@@ -604,17 +1181,26 @@ ul.menu li a:hover {
   clear: none;
 }
 
-/* line 14, ../sass/partials/design/regions/_header.scss */
+/* line 8, ../sass/partials/design/regions/_header.scss */
 .header-wrapper {
-  padding: 1em 0;
+  padding: 2em 0;
   background-image: -webkit-linear-gradient(315deg, #3b1d61 0%, #562a59 14%, #cb6039 73%, #ff942d 100%);
   background-image: linear-gradient(135deg, #3b1d61 0%, #562a59 14%, #cb6039 73%, #ff942d 100%);
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.34);
           box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.34);
   z-index: 1;
-  position: fixed;
   width: 100%;
   top: 0;
+}
+@media (min-width: 62.5em) {
+  /* line 8, ../sass/partials/design/regions/_header.scss */
+  .header-wrapper {
+    position: fixed;
+  }
+}
+/* line 92, ../../../../.rvm/gems/ruby-2.1.1/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+.no-mq .header-wrapper {
+  position: fixed;
 }
 
 /* line 1, ../sass/partials/design/regions/_main.scss */
@@ -623,7 +1209,7 @@ ul.menu li a:hover {
   margin: 0 auto;
   padding: 0;
 }
-/* line 13, ../../vendor/bundle/gems/toolkit-2.3.0/stylesheets/toolkit/_clearfix.scss */
+/* line 13, ../../../../.rvm/gems/ruby-2.1.1/gems/toolkit-2.3.0/stylesheets/toolkit/_clearfix.scss */
 .wrap:after {
   content: "";
   display: table;
@@ -639,7 +1225,7 @@ body.notfront .main-wrapper {
 body.notfront main {
   padding: 0 2em;
 }
-/* line 13, ../../vendor/bundle/gems/toolkit-2.3.0/stylesheets/toolkit/_clearfix.scss */
+/* line 13, ../../../../.rvm/gems/ruby-2.1.1/gems/toolkit-2.3.0/stylesheets/toolkit/_clearfix.scss */
 body.notfront main:after {
   content: "";
   display: table;
@@ -655,7 +1241,7 @@ body.front .main-wrapper {
 body.front main {
   padding: 0;
 }
-/* line 13, ../../vendor/bundle/gems/toolkit-2.3.0/stylesheets/toolkit/_clearfix.scss */
+/* line 13, ../../../../.rvm/gems/ruby-2.1.1/gems/toolkit-2.3.0/stylesheets/toolkit/_clearfix.scss */
 body.front main:after {
   content: "";
   display: table;
@@ -688,7 +1274,7 @@ html body {
   max-width: 1200px;
   margin: 0 auto;
 }
-/* line 13, ../../vendor/bundle/gems/toolkit-2.3.0/stylesheets/toolkit/_clearfix.scss */
+/* line 13, ../../../../.rvm/gems/ruby-2.1.1/gems/toolkit-2.3.0/stylesheets/toolkit/_clearfix.scss */
 .wrap:after {
   content: "";
   display: table;
@@ -772,7 +1358,7 @@ body.front {
   height: 25px;
   border-radius: 50%;
   margin-bottom: -5px;
-  border: 2px solid #0f7abd;
+  border: 2px solid #ff942d;
 }
 /* line 16, ../sass/partials/design/views/_blog.scss */
 .blog-wrapper .right-blog ul {
@@ -785,7 +1371,7 @@ body.front {
 }
 /* line 21, ../sass/partials/design/views/_blog.scss */
 .blog-wrapper .right-blog ul li.tag-label {
-  background: #0f7abd;
+  background: #ff942d;
   padding: 2px 5px;
   border-radius: 3px;
   font-size: .8rem;
