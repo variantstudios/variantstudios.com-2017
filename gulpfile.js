@@ -22,7 +22,7 @@ var messages = {
  * Build the Jekyll Site
  */
 gulp.task('jekyll-build', function(done) {
-  browserSync.notify(messages.jekyllBuild);
+  //browserSync.notify(messages.jekyllBuild);
   return cp.spawn('jekyll', ['build'], {
       stdio: 'inherit'
     }).on('close', done);
@@ -40,6 +40,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
  */
 gulp.task('browser-sync', ['compass', 'jekyll-build'], function() {
   browserSync({
+    notify: false,
     server: {
       baseDir: '_site'
     }
@@ -73,7 +74,7 @@ gulp.task('sass-deploy', function() {
 gulp.task('watch', function() {
   gulp.watch('assets/sass/**', ['compass']);
   gulp.watch('assets/js/dev/**', ['scripts']);
-  gulp.watch(['**.md', '**.html', '_layouts/**.html', '_includes/**.html', '_data/**', 'pages/**', 'assets/**.csv', 'assets/images/**', 'projects/**','_sg/**'], ['jekyll-rebuild']);
+  gulp.watch(['**.md', '**.html', '_layouts/**.html', '_includes/**.html', '_data/**', 'pages/**', 'assets/**.csv', 'assets/images/**', 'projects/**'], ['jekyll-rebuild']);
 });
 
 // Compile Compass/sass
