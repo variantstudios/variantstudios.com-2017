@@ -1,6 +1,6 @@
 ---
-title: About
-permalink: "/about/"
+title: Studio
+permalink: "/studio/"
 description: This is just a sample general page.
 layout: page
 ---

@@ -470,8 +470,13 @@ ul.menu li a:hover {
   right: 0;
 }
 
-/* line 5, ../sass/partials/design/regions/_footer.scss */
-.front .footer-wrapper {
+/* line 2, ../sass/partials/design/regions/_footer.scss */
+body.notfront .footer-wrapper {
+  padding: 0 2em;
+}
+
+/* line 7, ../sass/partials/design/regions/_footer.scss */
+body.front .footer-wrapper {
   background: #111;
   position: absolute;
   bottom: 0;
@@ -479,26 +484,26 @@ ul.menu li a:hover {
   height: 50px;
   z-index: 1;
 }
-/* line 12, ../sass/partials/design/regions/_footer.scss */
-.front .footer-wrapper h3 {
+/* line 14, ../sass/partials/design/regions/_footer.scss */
+body.front .footer-wrapper h3 {
   margin: 0;
   color: #fff;
 }
-/* line 16, ../sass/partials/design/regions/_footer.scss */
-.front .footer-wrapper div {
+/* line 18, ../sass/partials/design/regions/_footer.scss */
+body.front .footer-wrapper div {
   height: 50px;
   text-align: center;
   padding-top: 10px;
   cursor: pointer;
   position: relative;
 }
-/* line 23, ../sass/partials/design/regions/_footer.scss */
-.front .footer-wrapper .one {
+/* line 25, ../sass/partials/design/regions/_footer.scss */
+body.front .footer-wrapper .one {
   background: #F88D2F;
 }
 @media (min-width: 50em) {
-  /* line 23, ../sass/partials/design/regions/_footer.scss */
-  .front .footer-wrapper .one {
+  /* line 25, ../sass/partials/design/regions/_footer.scss */
+  body.front .footer-wrapper .one {
     width: 25%;
     float: left;
     margin-right: -100%;
@@ -507,20 +512,20 @@ ul.menu li a:hover {
   }
 }
 /* line 92, ../../vendor/bundle/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
-.no-mq .front .footer-wrapper .one {
+.no-mq body.front .footer-wrapper .one {
   width: 25%;
   float: left;
   margin-right: -100%;
   margin-left: 0;
   clear: none;
 }
-/* line 29, ../sass/partials/design/regions/_footer.scss */
-.front .footer-wrapper .two {
+/* line 31, ../sass/partials/design/regions/_footer.scss */
+body.front .footer-wrapper .two {
   background: #C35C3B;
 }
 @media (min-width: 50em) {
-  /* line 29, ../sass/partials/design/regions/_footer.scss */
-  .front .footer-wrapper .two {
+  /* line 31, ../sass/partials/design/regions/_footer.scss */
+  body.front .footer-wrapper .two {
     width: 25%;
     float: left;
     margin-right: -100%;
@@ -529,20 +534,20 @@ ul.menu li a:hover {
   }
 }
 /* line 92, ../../vendor/bundle/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
-.no-mq .front .footer-wrapper .two {
+.no-mq body.front .footer-wrapper .two {
   width: 25%;
   float: left;
   margin-right: -100%;
   margin-left: 25%;
   clear: none;
 }
-/* line 35, ../sass/partials/design/regions/_footer.scss */
-.front .footer-wrapper .three {
+/* line 37, ../sass/partials/design/regions/_footer.scss */
+body.front .footer-wrapper .three {
   background: #783A50;
 }
 @media (min-width: 50em) {
-  /* line 35, ../sass/partials/design/regions/_footer.scss */
-  .front .footer-wrapper .three {
+  /* line 37, ../sass/partials/design/regions/_footer.scss */
+  body.front .footer-wrapper .three {
     width: 25%;
     float: left;
     margin-right: -100%;
@@ -551,20 +556,20 @@ ul.menu li a:hover {
   }
 }
 /* line 92, ../../vendor/bundle/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
-.no-mq .front .footer-wrapper .three {
+.no-mq body.front .footer-wrapper .three {
   width: 25%;
   float: left;
   margin-right: -100%;
   margin-left: 50%;
   clear: none;
 }
-/* line 41, ../sass/partials/design/regions/_footer.scss */
-.front .footer-wrapper .four {
+/* line 43, ../sass/partials/design/regions/_footer.scss */
+body.front .footer-wrapper .four {
   background: #46225E;
 }
 @media (min-width: 50em) {
-  /* line 41, ../sass/partials/design/regions/_footer.scss */
-  .front .footer-wrapper .four {
+  /* line 43, ../sass/partials/design/regions/_footer.scss */
+  body.front .footer-wrapper .four {
     width: 25%;
     float: right;
     margin-left: 0;
@@ -573,7 +578,7 @@ ul.menu li a:hover {
   }
 }
 /* line 92, ../../vendor/bundle/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
-.no-mq .front .footer-wrapper .four {
+.no-mq body.front .footer-wrapper .four {
   width: 25%;
   float: right;
   margin-left: 0;

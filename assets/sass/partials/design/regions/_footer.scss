@@ -1,7 +1,9 @@
-.footer-wrapper {
-
+body.notfront {
+  .footer-wrapper {
+    padding: 0 2em;
+  }
 }
-.front {
+body.front {
   .footer-wrapper {
   background: #111;
   position: absolute;
