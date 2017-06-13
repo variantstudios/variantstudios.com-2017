@@ -11,14 +11,14 @@ $(document).ready(function() {
   // });
 
 
-// Front Slider
-// $('.front-slider').slick({
-//   infinite: true,
-//   slidesToShow: 3,
-//   slidesToScroll: 3,
-//   adaptiveHeight: true,
-//   arrows: false
-// });
+//Front Slider
+$('.front-slider').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  adaptiveHeight: true,
+  arrows: false
+});
 
 // function setHeight() {
 //     windowHeight = $(window).innerHeight();
@@ -44,27 +44,27 @@ $('.footer-blocks .footer-block-info').click(function() {
 
 
 TweenLite.to("#hamburger", 0, { display:"block" });
-TweenLite.to(".main-wrapper", 1, {delay: 1.2, ease: Expo.easeInOut, opacity:1 });
+TweenLite.to(".main-wrapper", 1, {delay: .6, ease: Expo.easeInOut, opacity:1 });
 TweenLite.from(".header-wrapper", 0.5, { ease: Back.easeOut.config(0.3), top:-200 });
 
 
 
-// TweenLite.from(".menu-corner ", 0.5, {delay: 1, ease: Back.easeOut.config(.4), top:-300, right: -100});
+TweenLite.from(".menu-corner ", 0.5, {delay: .4, ease: Back.easeOut.config(.4), top:-300, right: -100});
 
-// TweenLite.from(".footer-wrapper", 0.5, {delay: 1.2, ease: Back.easeOut.config(.4), bottom:-50});
+TweenLite.from(".footer-wrapper", 0.5, {delay: .6, ease: Back.easeOut.config(.4), bottom:-50});
 
-//   $('.footer-wrapper div').on('mouseenter',
-//   function() {
-//     TweenLite.to(this, 0.5, {ease:Back.easeOut, bottom:5});
-//   });
-//   $('.footer-wrapper div').on('mouseleave',
-//   function() {
-//     TweenLite.to(this, 0.2, {ease:Back.easeOut, bottom:0});
-//   });
-//   $('.footer-wrapper div').on('click',
-//   function() {
-//     TweenLite.to('.main-wrapper', 0.5, {ease:Back.easeOut, backgroundColor:"rgba(36,36,36,0.78)"});
-//   });
+  $('.footer-wrapper div').on('mouseenter',
+  function() {
+    TweenLite.to(this, 0.5, {ease:Back.easeOut, bottom:5});
+  });
+  $('.footer-wrapper div').on('mouseleave',
+  function() {
+    TweenLite.to(this, 0.2, {ease:Back.easeOut, bottom:0});
+  });
+  $('.footer-wrapper div').on('click',
+  function() {
+    TweenLite.to('.main-wrapper', 0.5, {ease:Back.easeOut, backgroundColor:"rgba(36,36,36,0.78)"});
+  });
 
   
 
@@ -111,19 +111,19 @@ TweenLite.to(".menu-text", .5, {
   ease: Power1.easeInOut
 })
 TweenLite.to("#first", .5, {
-  delay: 1.2,
+  delay: .6,
   drawSVG: "14%",
   ease: Power1.easeInOut,
   stroke: "#552959",
 })
 TweenLite.to("#middle", .6, {
-  delay: 1.2,
+  delay: .6,
   drawSVG: "100%",
   ease: Power1.easeInOut,
   stroke: "#BE5B3E"
 })
 TweenLite.to("#second", .7, {
-  delay: 1.2,
+  delay: .6,
   drawSVG: "11.5%",
   ease: Power1.easeInOut,
   stroke: "#F08431"
