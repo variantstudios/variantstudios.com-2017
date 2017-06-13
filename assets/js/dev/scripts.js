@@ -11,14 +11,14 @@ $(document).ready(function() {
   // });
 
 
-// Front Slider
-// $('.front-slider').slick({
-//   infinite: true,
-//   slidesToShow: 3,
-//   slidesToScroll: 3,
-//   adaptiveHeight: true,
-//   arrows: false
-// });
+//Front Slider
+$('.front-slider').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  adaptiveHeight: true,
+  arrows: false
+});
 
 // function setHeight() {
 //     windowHeight = $(window).innerHeight();
