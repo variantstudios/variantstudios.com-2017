@@ -11,6 +11,8 @@ layout: default
       {% include contact-form.html %}
       {% elsif page.url contains "studio" %}
         {% include team.html %}
+      {% elsif page.url contains "start-a-project" %}
+        {% include project-form.html %}
     {% endif %}
   </section>
 </main>
