@@ -5,11 +5,12 @@ layout: default
 <main>
   <section class="blog-wrapper wrap">
     <div class="blog-item clearfix">
-      <p><a href="/blog/">< Back to all blogs</a></p>
+      
       <div class="left-image">
         {% if page.image_path %}
           <img src="{{ page.image_path }}" alt="{{ page.title }}">
         {% endif %}
+        <p><a href="/blog/">< Back to all blogs</a></p>
       </div>
       <div class="right-blog">
         <a href="{{ post.url }}"><h3>{{ page.title }}</h3></a>
